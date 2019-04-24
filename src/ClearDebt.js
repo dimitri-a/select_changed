@@ -1,6 +1,6 @@
 import React from "react";
 
-const DebtType = ( options) => {
+const ClearDebt = ( options) => {
 console.log(options)
   return (
     <select>
@@ -11,4 +11,4 @@ console.log(options)
   );
 };
 
-export default DebtType;
+export default ClearDebt;

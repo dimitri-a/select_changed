@@ -1,32 +1,33 @@
 {
   "DEBT_TYPE": [
-      {
-        "label": "Plse Choose one"
-      },
-      {
-        "label": "No Change"
-      },
-      {
-        "label": "New"
-      },
-      {
-        "label": "Increase"
-      },
-      {
-        "label": "Variation"
-      },
-      {
-        "label": "Clear & Close"
-      },
-      {
-        "label": "Clear & Covert (SGB Only)"
-      },
-      {
-        "label": "Reduce"
-      },
-      {
-        "label": "Disbursement Only"
-      }
-    
-    ]
+    {
+      "label": "Plse Choose one"
+    },
+    {
+      "label": "No Change"
+    },
+    {
+      "label": "New"
+    },
+    {
+      "label": "Increase"
+    },
+    {
+      "label": "Variation"
+    },
+    {
+      "label": "Clear & Close"
+    },
+    {
+      "label": "Clear & Covert (SGB Only)"
+    },
+    {
+      "label": "Reduce"
+    },
+    {
+      "label": "Disbursement Only"
+    }
+  ],
+
+  "CLEARDEBT_TYPE": [{ "label": "Customer" }, { "label": "Loan Proceeds" }]
 }
