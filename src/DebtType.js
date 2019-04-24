@@ -2,12 +2,13 @@ import React from "react";
 
 
 
-const DebtType = (options, handleChangeDebtType) => {
+const DebtType = ({options, handleChangeDebtType}) => {
   console.log(options);
+
   return (
     <select onChange={handleChangeDebtType}>
-      {options.options.map(option => {
-        return <option>{option.label}</option>;
+      {options.map(option => {
+        return <option value={option.value}>{option.label}</option>;
       })}
     </select>
   );

@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { Component } from "react";
 import DebtType from "./DebtType";
 import mockOptions from "./mockData.json";
@@ -6,31 +7,35 @@ import { reduxForm } from "redux-form";
 import { connect } from "react-redux";
 
 class MyContainer extends Component {
-  handleChangeDebtType= () => {
-    //save selected debttype to store
-    console.log("handleChangeDebtType");
-  }
+    handleChangeDebtType = event => {
+      //save selected debttype to store
+      console.log("handleChangeDebtType value",event.target.value);
+      this.props.setDebtType(event.target.value);
 
-  render() {
-    return (
-      <div>
-        <DebtType
-          options={mockOptions.DEBT_TYPE}
-          handleChangeDebtType={this.handledChangeDebtType}
-        />
-        <ClearDebtType options={mockOptions.CLEARDEBT_TYPE} />
-      </div>
-    );
+    };
+  
+    render() {
+      return (
+        <div>
+          <DebtType
+            options={mockOptions.DEBT_TYPE}
+            handleChangeDebtType={this.handleChangeDebtType}
+          />
+          <ClearDebtType options={mockOptions.CLEARDEBT_TYPE} />
+        </div>
+      );
+    }
   }
-}
+  
 
-const mapStateToProps = state => ({
+const mapDispatchToProps = state => ({
   //selectedDebtType:
+  setDebtType: type => dispatch(change('facilityForm','debtType',type))
 });
 
 MyContainer = connect(
-  mapStateToProps,
-  undefined
+  undefined,
+  mapDispatchToProps
 )(MyContainer);
 
 export default reduxForm({

@@ -4,28 +4,36 @@
       "label": "Plse Choose one"
     },
     {
-      "label": "No Change"
+      "label": "No Change",
+      "value":0
     },
     {
-      "label": "New"
+      "label": "New",
+      "value":1
     },
     {
-      "label": "Increase"
+      "label": "Increase",
+      "value":2
     },
     {
-      "label": "Variation"
+      "label": "Variation",
+      "value":3
     },
     {
-      "label": "Clear & Close"
+      "label": "Clear & Close",
+      "value":4
     },
     {
-      "label": "Clear & Covert (SGB Only)"
+      "label": "Clear & Covert (SGB Only)",
+      "value":5
     },
     {
-      "label": "Reduce"
+      "label": "Reduce",
+      "value":6
     },
     {
-      "label": "Disbursement Only"
+      "label": "Disbursement Only",
+      "value":7
     }
   ],
 
