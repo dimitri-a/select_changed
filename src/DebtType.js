@@ -1,13 +1,9 @@
 import React from "react";
 
 
-const handleChangeDebtType = () =>
-{
-    //save selected debttype to store
-    console.log('handleChangeDebtType');
-} 
-const DebtType = ( options) => {
-console.log(options)
+
+const DebtType = (options, handleChangeDebtType) => {
+  console.log(options);
   return (
     <select onChange={handleChangeDebtType}>
       {options.options.map(option => {
