@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import DebtType from './DebtType';
 import mockOptions from './mockData.json'
 import ClearDebtType from './ClearDebt'
-class Container extends Component {
+import {reduxForm} from 'redux-form'
+import {connect} from 'react-redux'
+
+class MyContainer extends Component {
     render() {
         return (
             <div>
@@ -11,6 +14,23 @@ class Container extends Component {
             </div>
         );
     }
+
+
 }
 
-export default Container;
+const mapStateToProps = state => ({
+ //selectedDebtType: 
+    
+  });
+  
+  MyContainer = connect(
+    mapStateToProps,
+    undefined
+  )(MyContainer);
+
+
+export default reduxForm({
+    form: 'simple' // a unique identifier for this form
+  })(MyContainer)
+
+//export default ;
