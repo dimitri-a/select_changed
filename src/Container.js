@@ -10,8 +10,8 @@ class MyContainer extends Component {
     handleChangeDebtType = event => {
       //save selected debttype to store
       console.log("handleChangeDebtType value",event.target.value);
-     // this.props.setDebtType(event.target.value);
-
+     //this.props.setDebtType(event.target.value);
+     this.props.change("debtType", event.target.value);
     };
   
     render() {
@@ -28,7 +28,7 @@ class MyContainer extends Component {
   }
   
 
-const mapDispatchToProps = state => ({
+const mapDispatchToProps = state => dispatch => ({
   //selectedDebtType:
   setDebtType: type => dispatch(change('facilityForm','debtType',type))
 });
