@@ -10,7 +10,7 @@ class MyContainer extends Component {
     handleChangeDebtType = event => {
       //save selected debttype to store
       console.log("handleChangeDebtType value",event.target.value);
-      this.props.setDebtType(event.target.value);
+     // this.props.setDebtType(event.target.value);
 
     };
   
