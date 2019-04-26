@@ -12,20 +12,26 @@ class MyContainer extends Component {
     console.log("handleChangeDebtType value", event.target.value);
     //this.props.setDebtType(event.target.value);
     this.props.change("debtType", event.target.value);
-    if (event.target.value ==='1' || event.target.value ==="2"
-    )
-    {
-    this.props.change("newLimit",0)
+    if (event.target.value === "4" || event.target.value === "5") {
+      this.props.change("newLimit", 0);
+      // this.disableNewLimit(event.target.value)
     }
   };
 
+  // disableNewLimit = (val) => {
+  //   console.log('newlimitdisabled')
+  //   if (val === 4 || val === 5) {
+  //     return true;
+  //   }
+  //   return false;
+  // };
+
   render() {
-    const { debtType ,newLimit} = this.props;
+    const { debtType, newLimit } = this.props;
 
     console.log("debtType", debtType);
 
-    console.log("newLimit",newLimit)
-
+    console.log("newLimit", newLimit);
 
     return (
       <div>
@@ -38,8 +44,13 @@ class MyContainer extends Component {
           <ClearDebtType options={mockOptions.CLEARDEBT_TYPE} />
         )}
 
-        <Field name="newLimit" component="input" disabled={newLimit ===0} type="number" />
-
+{debtType}
+        <Field
+          name="newLimit"
+          component="input"
+          disabled={newLimit ===0}
+          type="number"
+        />
       </div>
     );
   }
@@ -48,7 +59,7 @@ class MyContainer extends Component {
 const selector = formValueSelector("facilitiesForm");
 const mapStateToProps = state => ({
   debtType: selector(state, "debtType"),
-  newLimit: selector(state,"newLimit")
+  newLimit: selector(state, "newLimit")
 });
 
 // const mapDispatchToProps = state => dispatch => ({
