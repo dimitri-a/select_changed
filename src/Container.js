@@ -22,7 +22,14 @@ class MyContainer extends Component {
       event.target.value === "7"
     ) {
       this.props.change("newLimit", this.props.currentLimit);
-      
+    }
+
+    if (
+      event.target.value === "1" ||
+      event.target.value === "2" ||
+      event.target.value === "6"
+    ) {
+      this.props.change("newLimit", "");
     }
   };
 
