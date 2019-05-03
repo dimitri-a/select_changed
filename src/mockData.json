@@ -37,5 +37,5 @@
     }
   ],
 
-  "CLEARDEBT_TYPE": [{ "label": "Customer" }, { "label": "Loan Proceeds" }]
+  "CLEARDEBT_TYPE": [{ "label": "Customer" }, { "label": "Loan Proceeds" }, {"label": "Customer" }, { "label": "Loan Proceeds" }]
 }
