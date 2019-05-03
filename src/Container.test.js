@@ -10,9 +10,10 @@ describe('Test Button component', () => {
     it('Test click event', () => {
         const defaultProps = {debtType:"1"}
         const myComp = shallow(<MyContainer {...defaultProps}/>);
-        // wrapper.find('DebtType').simulate('click');
+        //myComp.find('DebtType').simulate('click');
 
-        // const result = wrapper.find('ClearDebtType')
+        const result = myComp.find('ClearDebtType')        
+        console.log('result',result)
 
         // expect(result.length).toEqual(0)
     });
