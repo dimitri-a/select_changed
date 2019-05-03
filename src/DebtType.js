@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const DebtType = ({options, handleChangeDebtType}) => {
   console.log(options);
 
