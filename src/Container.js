@@ -17,7 +17,6 @@ import { connect } from "react-redux";
   };
 
   updateNewLimit = (selectedVal,currentLimit) =>{
-   
     if (selectedVal=== "4" || selectedVal=== "5") {
       return 0;
     }
@@ -36,8 +35,6 @@ import { connect } from "react-redux";
     ) {
       return "";
     }
-
-
   }
 
 
