@@ -22,19 +22,20 @@ describe("Facilitydetails select visibility tests | 128, 129, 312", () => {
           ]}
         />
       );
-    //find second select in container
+    //find ClearDebtType (second select) in container
     const result = wrapper.find(ClearDebtType);
     //expect the options property to have a length of 2 : Customer/Loan proceeds
     expect(result.props().options.length).toEqual(2);
   });
 
-  xit("should NOT show the second select component", () => {
+  it("should NOT show the second select component", () => {
     //when the debtType is not 1 or 2 it should not be visible
     const myComp = shallow(<FacilityDetails debtType={"3"} />);
     //find second select in container
-    const result = myComp.find(ClearDebt);
+    const result = myComp.find(ClearDebtType);
+    console.log(result.exists())
     //expect the result to be empty
-    expect(result.isEmptyRender()).toEqual(true);
+    expect(result.exists()).toEqual(false);
   });
 
   xit("should disable the newlimit inputfield when newLimit is 0 | 312-ac3 ", () => {

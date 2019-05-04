@@ -24,6 +24,7 @@ export default class FacilityDetails extends Component {
         )}
 
         <Field name="currentLimit" component="input" type="number" />
+        
         <Field
           name="newLimit"
           component="input"
