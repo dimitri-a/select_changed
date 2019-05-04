@@ -23,4 +23,25 @@ describe('Container select visibility tests', () => {
         //expect the result to be empty
         expect(result.isEmptyRender() ).toEqual(true)
     });
+
+    it('should default newlimit to zero 312-ac3 ', () => {
+        //when debtType is Clear close/Clear and convert
+        const myComp = shallow(<MyContainer newLimit={0}/>);
+        //find newLimit element
+        const result = myComp.find('[name="newLimit"]');
+        //expect the result to  be disabled
+        expect(result.props().disabled ).toEqual(true)
+    });    
+    
+    xit('should default newlimit to zero 312-ac3 ', () => {
+        //when debtType is Clear close/Clear and convert
+        const myComp = shallow(<MyContainer newLimit={0}/>);
+        //find newLimit element
+        const result = myComp.find('[name="newLimit"]');
+        //expect the result to  be disabled
+        console.log(result.props())
+        expect(result.props().value ).toEqual(true)
+    });
+
+
   });

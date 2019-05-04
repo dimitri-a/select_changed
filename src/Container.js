@@ -38,7 +38,7 @@ import { connect } from "react-redux";
           options={mockOptions.DEBT_TYPE}
           handleChangeDebtType={this.handleChangeDebtType}
         />
-
+{debtType}
         {(debtType === "1" || debtType === "2") && (
           <ClearDebtType options={mockOptions.CLEARDEBT_TYPE} />
         )}
