@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import ClearDebt from "./ClearDebt";
 configure({ adapter: new Adapter() });
 
-describe('Container select visibility tests | 128, 129, 312', () => {
+describe('Facilitydetails select visibility tests | 128, 129, 312', () => {
     it('should show the second select component', () => {
          //when the debtType is 1 or 2 it should  be visible
         const myComp = shallow(<FacilityDetails debtType={"1"}/>);
@@ -33,21 +33,8 @@ describe('Container select visibility tests | 128, 129, 312', () => {
         expect(result.props().disabled ).toEqual(true)
     });    
     
-    it('should default newlimit to zero when debType is Clear close or Clear and convert | 312-ac3 ', () => {
-        //when debtType is Clear close/Clear and convert
-        const myComp = shallow(<FacilityDetails/>);
-        const result =myComp.instance().updateNewLimit("4",2000)
-           //expect the result to  be 0
-        expect(result).toEqual(0)
-    });
 
-    it('should default newlimit to currentLimit when debType is No Change, Variation, Disbursement Only | 312-ac3 ', () => {
-        //when debtType is Clear close/Clear and convert
-        const myComp = shallow(<FacilityDetails/>);
-        const result =myComp.instance().updateNewLimit("3",2000)
-           //expect the result to  be 2000
-        expect(result).toEqual(2000)
-    });
+
 
 
   });

@@ -8,7 +8,7 @@ import { reduxForm, formValueSelector, Field } from "redux-form";
 export default class FacilityDetails extends Component {
 
   render() {
-    const { debtType, newLimit, handleChangeDebtType } = this.props;
+    const { debtType, newLimit, handleChangeDebtType} = this.props;
     return (
       <div>
         <DebtType
