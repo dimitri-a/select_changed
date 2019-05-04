@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import ClearDebt from "./ClearDebt";
 configure({ adapter: new Adapter() });
 
-describe('Container select visibility tests', () => {
+describe('Container select visibility tests | 128, 129, 312', () => {
     it('should show the second select component', () => {
          //when the debtType is 1 or 2 it should  be visible
         const myComp = shallow(<MyContainer debtType={"1"}/>);
