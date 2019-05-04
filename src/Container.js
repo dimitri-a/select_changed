@@ -40,7 +40,7 @@ import FacilityDetails from "./FacilityDetails";
         <FacilityDetails
         debtType={debtType}
         newLimit={newLimit}
-        mockOptions={mockOptions}
+        CLEARDEBT_TYPE={mockOptions.ClearDebtType}
         handleChangeDebtType={this.handleChangeDebtType}
       
         />
