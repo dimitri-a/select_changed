@@ -17,26 +17,7 @@ import FacilityDetails from "./FacilityDetails";
     this.props.change("newLimit", newValue);
   };
 
-  updateNewLimit = (selectedVal,currentLimit) =>{
-    if (selectedVal=== "4" || selectedVal=== "5") {
-      return 0;
-    }
-    if (
-      selectedVal=== "0" ||
-      selectedVal=== "3" ||
-      selectedVal=== "7"
-    ) {
-      return currentLimit;
-    }
-
-    if (
-      selectedVal=== "1" ||
-      selectedVal=== "2" ||
-      selectedVal=== "6"
-    ) {
-      return "";
-    }
-  }
+  
 
 
   render() {
