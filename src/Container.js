@@ -4,6 +4,7 @@ import mockOptions from "./mockData.json";
 import ClearDebtType from "./ClearDebt";
 import { reduxForm, formValueSelector, Field } from "redux-form";
 import { connect } from "react-redux";
+import FacilityDetails from "./FacilityDetails";
 
  export class MyContainer extends Component {
 
@@ -43,22 +44,14 @@ import { connect } from "react-redux";
 
     return (
       <div>
-        <DebtType
-          options={mockOptions.DEBT_TYPE}
-          handleChangeDebtType={this.handleChangeDebtType}
+        <FacilityDetails
+        debtType={debtType}
+        newLimit={newLimit}
+        mockOptions={mockOptions}
+        handleChangeDebtType={this.handleChangeDebtType}
+      
         />
-{debtType}
-        {(debtType === "1" || debtType === "2") && (
-          <ClearDebtType options={mockOptions.CLEARDEBT_TYPE} />
-        )}
-
-        <Field name="currentLimit" component="input" type="number" />
-        <Field
-          name="newLimit"
-          component="input"
-          disabled={newLimit === 0}
-          type="number"
-        />
+        
       </div>
     );
   }
