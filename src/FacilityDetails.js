@@ -6,18 +6,22 @@ import ClearDebtType from "./ClearDebt";
 import { reduxForm, formValueSelector, Field } from "redux-form";
 
 export default class FacilityDetails extends Component {
-
   render() {
-    const { debtType, newLimit, handleChangeDebtType, CLEARDEBT_TYPE} = this.props;
+    const {
+      debtType,
+      newLimit,
+      handleChangeDebtType,
+      CLEARDEBT_TYPE
+    } = this.props;
     return (
       <div>
         <DebtType
           options={mockOptions.DEBT_TYPE}
           handleChangeDebtType={handleChangeDebtType}
         />
-        {/* {(debtType === "1" || debtType === "2") && ( */}
+        {(debtType === "1" || debtType === "2") && (
           <ClearDebtType options={CLEARDEBT_TYPE} />
-        {/* )} */}
+        )}
 
         <Field name="currentLimit" component="input" type="number" />
         <Field

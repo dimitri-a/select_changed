@@ -6,29 +6,24 @@ import ClearDebtType from "./ClearDebt";
 configure({ adapter: new Adapter() });
 
 describe("Facilitydetails select visibility tests | 128, 129, 312", () => {
-  it("first test", () => {
-    const wrapper = shallow(
-      <FacilityDetails
-        CLEARDEBT_TYPE={[
-          {
-            label: "Customer"
-          },
-          {
-            label: "Loan Proceeds"
-          }
-        ]}
-      />
-    );
-    //how to pass in options props ? and make test work
-    const result = wrapper.find(ClearDebtType);
-    expect(result.props().options.length).toEqual(2);
-  });
 
-  xit("should show the second select component", () => {
+  it("should show the second select component", () => {
     //when the debtType is 1 or 2 it should  be visible
-    const myComp = shallow(<FacilityDetails debtType={"1"} />);
+    const wrapper = shallow(
+        <FacilityDetails
+          debtType={"1"}
+          CLEARDEBT_TYPE={[
+            {
+              label: "Customer"
+            },
+            {
+              label: "Loan Proceeds"
+            }
+          ]}
+        />
+      );
     //find second select in container
-    const result = myComp.find(ClearDebt);
+    const result = wrapper.find(ClearDebtType);
     //expect the options property to have a length of 2 : Customer/Loan proceeds
     expect(result.props().options.length).toEqual(2);
   });
