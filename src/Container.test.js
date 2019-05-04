@@ -24,7 +24,7 @@ describe('Container select visibility tests', () => {
         expect(result.isEmptyRender() ).toEqual(true)
     });
 
-    it('should default newlimit to zero 312-ac3 ', () => {
+    it('should default disable the newlimit inputfield 312-ac3 ', () => {
         //when debtType is Clear close/Clear and convert
         const myComp = shallow(<MyContainer newLimit={0}/>);
         //find newLimit element
@@ -33,9 +33,9 @@ describe('Container select visibility tests', () => {
         expect(result.props().disabled ).toEqual(true)
     });    
     
-    xit('should default newlimit to zero 312-ac3 ', () => {
+    it('should default newlimit to zero 312-ac3 ', () => {
         //when debtType is Clear close/Clear and convert
-        const myComp = shallow(<MyContainer newLimit={0}/>);
+        const myComp = shallow(<MyContainer debtType={"4"}/>);
         //find newLimit element
         const result = myComp.find('[name="newLimit"]');
         //expect the result to  be disabled

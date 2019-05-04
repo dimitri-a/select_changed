@@ -6,28 +6,40 @@ import { reduxForm, formValueSelector, Field } from "redux-form";
 import { connect } from "react-redux";
 
  export class MyContainer extends Component {
+
   handleChangeDebtType = event => {
     console.log("handleChangeDebtType value", event.target.value);
     this.props.change("debtType", event.target.value);
-    if (event.target.value === "4" || event.target.value === "5") {
-      this.props.change("newLimit", 0);
+
+    const newValue = this.updateNewLimit(event.target.value,this.props.currentLimit)
+
+    this.props.change("newLimit", newValue);
+  };
+
+  updateNewLimit = (selectedVal,currentLimit) =>{
+   
+    if (selectedVal=== "4" || selectedVal=== "5") {
+      return 0;
     }
     if (
-      event.target.value === "0" ||
-      event.target.value === "3" ||
-      event.target.value === "7"
+      selectedVal=== "0" ||
+      selectedVal=== "3" ||
+      selectedVal=== "7"
     ) {
-      this.props.change("newLimit", this.props.currentLimit);
+      return currentLimit;
     }
 
     if (
-      event.target.value === "1" ||
-      event.target.value === "2" ||
-      event.target.value === "6"
+      selectedVal=== "1" ||
+      selectedVal=== "2" ||
+      selectedVal=== "6"
     ) {
-      this.props.change("newLimit", "");
+      return "";
     }
-  };
+
+
+  }
+
 
   render() {
   const { debtType, newLimit } = this.props;
