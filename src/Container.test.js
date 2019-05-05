@@ -29,9 +29,9 @@ describe('Container select visibility tests | 128, 129, 312', () => {
     it('should trigger handleChangeDebtType event',() =>{
         const myComp = mount(<MyContainer/>);
 
-        let mySelect =myComp.find(DebtType).simulate('change');
+        let mySelect =myComp.find(DebtType).simulate('click');
 
-        console.log(mySelect)
+       expect(mySelect.value).toEqual("0")
     })
 
     
