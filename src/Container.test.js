@@ -25,6 +25,10 @@ describe('Container select visibility tests | 128, 129, 312', () => {
     });
 
 
+    it('should trigger handleChangeDebtType event',() =>{
+        const myComp = shallow(<Container/>);
+    })
+
     
 
 
